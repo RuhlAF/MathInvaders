@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Maths Invaders icon">
+  <rect width="512" height="512" rx="96" fill="#07131f"/>
+  <path fill="#11182a" d="M54 338c42-44 111-70 202-70s160 26 202 70v104H54z"/>
+  <path fill="#57f4ff" d="M240 308h32v32h64v48H176v-48h64zm-48 80h128v32H192z"/>
+  <path fill="#0ea89d" d="M160 404h192v28H160z"/>
+  <path fill="#ff3434" d="M162 92h32v32h32v32h-96v-32h32zm-64 64h160v96h-32v32h-32v-32h-64v32H98v-32H66v-96zm32 32v32h32v-32zm64 0v32h32v-32z"/>
+  <path fill="#ff61f5" d="M330 104h32v32h32v32h-96v-32h32zm-64 64h160v84h-32v32h-32v-32h-64v32h-32v-32h-32v-84zm32 28v28h32v-28zm64 0v28h32v-28z"/>
+  <path fill="#f7ff66" d="M96 70h32v16H96zm288 0h32v16h-32zM66 318h32v16H66zm348 0h32v16h-32z"/>
+</svg>

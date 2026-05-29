@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#07131f">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Maths Invaders">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Maths Invaders</title>
+    <link rel="manifest" href="./manifest.webmanifest">
+    <link rel="icon" href="./icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./apple-touch-icon.svg">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="app-shell" aria-label="Maths Invaders">
+      <header class="app-header">
+        <div>
+          <p class="eyebrow">Year 6 Australia</p>
+          <h1>Maths Invaders</h1>
+        </div>
+        <div class="level-pill" aria-label="Current level">Level <span id="currentLevel">1</span></div>
+      </header>
+
+      <section class="panel" id="mathPanel" aria-live="polite">
+        <div class="panel-heading">
+          <p class="eyebrow" id="panelEyebrow">Choose a skill</p>
+          <h2 id="panelTitle">Ready the launch code</h2>
+          <p id="panelCopy">Score 9 or 10 to unlock one Space Invaders level.</p>
+        </div>
+
+        <div class="skill-grid" id="skillGrid" aria-label="Maths skill choices"></div>
+
+        <div class="quiz-board" id="quizBoard" hidden>
+          <div class="quiz-meta">
+            <span id="questionCount">Question 1 of 10</span>
+            <span id="quizScore">Score 0/10</span>
+          </div>
+          <div class="progress-track" aria-hidden="true">
+            <span id="progressFill"></span>
+          </div>
+          <p class="question-text" id="questionText"></p>
+          <div class="answer-grid" id="answerGrid"></div>
+          <p class="feedback" id="feedback" aria-live="polite"></p>
+          <button class="primary-action" type="button" id="nextQuestion" hidden>Next</button>
+        </div>
+
+        <div class="result-board" id="resultBoard" hidden>
+          <div class="score-orbit"><span id="resultScore">0/10</span></div>
+          <p id="resultCopy"></p>
+          <div class="action-row" id="resultActions"></div>
+        </div>
+      </section>
+
+      <section class="game-frame" id="gameFrame" aria-label="Space Invaders game screen" hidden>
+        <canvas id="game" width="390" height="640" tabindex="0"></canvas>
+      </section>
+
+      <nav class="touch-controls" id="touchControls" aria-label="Game controls" hidden>
+        <button class="control-button control-left" type="button" data-hold="left" aria-label="Move left">
+          <span aria-hidden="true"></span>
+        </button>
+        <button class="control-button control-fire" type="button" data-fire aria-label="Fire">
+          <span aria-hidden="true"></span>
+        </button>
+        <button class="control-button control-right" type="button" data-hold="right" aria-label="Move right">
+          <span aria-hidden="true"></span>
+        </button>
+      </nav>
+    </main>
+
+    <script src="./game.js"></script>
+    <script src="./pwa.js"></script>
+  </body>
+</html>
