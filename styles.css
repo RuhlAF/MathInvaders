@@ -89,7 +89,15 @@ canvas:focus-visible {
   text-transform: uppercase;
 }
 
-.level-pill {
+.header-status {
+  flex: 0 0 auto;
+  display: grid;
+  gap: 6px;
+  justify-items: end;
+}
+
+.level-pill,
+.offline-pill {
   flex: 0 0 auto;
   min-width: 82px;
   padding: 9px 10px;
@@ -100,6 +108,28 @@ canvas:focus-visible {
   font-size: 0.88rem;
   font-weight: 800;
   text-align: center;
+}
+
+.offline-pill {
+  min-width: 92px;
+  margin: 0;
+  padding: 6px 9px;
+  border-color: rgba(255, 209, 102, 0.36);
+  background: rgba(34, 29, 18, 0.86);
+  color: var(--gold);
+  font-size: 0.72rem;
+}
+
+.offline-pill.is-ready {
+  border-color: rgba(118, 245, 166, 0.45);
+  background: rgba(15, 47, 33, 0.86);
+  color: var(--green);
+}
+
+.offline-pill.is-offline {
+  border-color: rgba(96, 240, 255, 0.48);
+  background: rgba(14, 41, 53, 0.88);
+  color: var(--cyan);
 }
 
 .panel {

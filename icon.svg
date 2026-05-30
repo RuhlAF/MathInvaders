@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Maths Invaders icon">
-  <rect width="512" height="512" rx="96" fill="#07131f"/>
+  <rect width="512" height="512" fill="#07131f"/>
   <path fill="#11182a" d="M54 338c42-44 111-70 202-70s160 26 202 70v104H54z"/>
   <path fill="#57f4ff" d="M240 308h32v32h64v48H176v-48h64zm-48 80h128v32H192z"/>
   <path fill="#0ea89d" d="M160 404h192v28H160z"/>

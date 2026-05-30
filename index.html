@@ -11,7 +11,7 @@
     <title>Maths Invaders</title>
     <link rel="manifest" href="./manifest.webmanifest">
     <link rel="icon" href="./icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./maths-apple-touch-icon.png">
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
@@ -21,7 +21,10 @@
           <p class="eyebrow">Year 6 Australia</p>
           <h1>Maths Invaders</h1>
         </div>
-        <div class="level-pill" aria-label="Current level">Level <span id="currentLevel">1</span></div>
+        <div class="header-status">
+          <div class="level-pill" aria-label="Current level">Level <span id="currentLevel">1</span></div>
+          <p class="offline-pill" id="offlineStatus" aria-live="polite">Caching</p>
+        </div>
       </header>
 
       <section class="panel" id="mathPanel" aria-live="polite">
