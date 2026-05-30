@@ -1,4 +1,4 @@
-var CACHE_NAME = "maths-invaders-v5";
+var CACHE_NAME = "maths-invaders-v6";
 var OFFLINE_FALLBACK = "./index.html";
 var CORE_ASSETS = [
   "./",

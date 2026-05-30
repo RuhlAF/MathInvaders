@@ -18,6 +18,20 @@
     navigator.serviceWorker.controller.postMessage({ type: "CHECK_OFFLINE_READY" });
   }
 
+  function reloadOnceForControl() {
+    if (navigator.serviceWorker.controller || !navigator.onLine) return false;
+
+    try {
+      if (sessionStorage.getItem("mathsInvadersSwReloaded") === "1") return false;
+      sessionStorage.setItem("mathsInvadersSwReloaded", "1");
+    } catch (error) {
+      return false;
+    }
+
+    location.reload();
+    return true;
+  }
+
   function updateConnectionStatus() {
     if (!navigator.onLine) {
       setStatus("Offline", "is-offline");
@@ -40,13 +54,19 @@
   });
 
   navigator.serviceWorker.addEventListener("controllerchange", function () {
+    try {
+      sessionStorage.removeItem("mathsInvadersSwReloaded");
+    } catch (error) {
+      // Storage is only used to prevent a one-time reload loop.
+    }
     askOfflineReady();
   });
 
   window.addEventListener("load", function () {
-    navigator.serviceWorker.register("./sw.js").then(function () {
+    navigator.serviceWorker.register("./sw.js", { scope: "./" }).then(function () {
       return navigator.serviceWorker.ready;
     }).then(function () {
+      if (reloadOnceForControl()) return;
       askOfflineReady();
     }).catch(function () {
       setStatus("Online");
