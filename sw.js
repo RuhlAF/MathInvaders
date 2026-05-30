@@ -1,4 +1,4 @@
-var CACHE_NAME = "maths-invaders-v2";
+var CACHE_NAME = "maths-invaders-v3";
 var APP_SHELL = [
   "./",
   "./index.html",
@@ -7,7 +7,10 @@ var APP_SHELL = [
   "./pwa.js",
   "./manifest.webmanifest",
   "./icon.svg",
-  "./apple-touch-icon.svg"
+  "./icon-192.png",
+  "./icon-512.png",
+  "./apple-touch-icon.svg",
+  "./apple-touch-icon.png"
 ];
 
 self.addEventListener("install", function (event) {
